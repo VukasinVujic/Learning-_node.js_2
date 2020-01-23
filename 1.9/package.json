@@ -2,12 +2,13 @@
   "name": "hello-npm",
   "version": "1.0.0",
   "dependencies": {
-    "request": "^2.79.0"
+    "express": "github:expressjs/express",
+    "request": "^2.88.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.18.0"
+    "babel-cli": "^6.26.0"
   },
   "optionalDependencies": {
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.19.4"
   }
 }
