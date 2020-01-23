@@ -1,3 +1,4 @@
+// console.log(arguments);
 // let exports = module.exports;
 
 // exports.id = 1; // this is ok
@@ -17,8 +18,8 @@
 // const fs = require('fs');
 // console.log(fs);
 
-// const printStars = require('./printStars');
-// printStars(10, 'Hi!');
+const printStars = require('./printStars');
+printStars(10, 'Hi!');
 
 
 require('./ascii-art')();

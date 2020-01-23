@@ -6,4 +6,5 @@ process.env.PORT
 
 const { config } = require('./util');
 
-config.port
+console.log(answer);
+// config.port

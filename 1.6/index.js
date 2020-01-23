@@ -1,4 +1,9 @@
-// console.log(module);
+console.log('In ./index.js');
+console.log(module);
+
+ const findMeExports = require('./lib/find-me');
+ console.log('findMeExports: ', findMeExports);
+require('./lib/find-me');
 
 // Extra paths:
 // $HOME/.node_modules
@@ -20,5 +25,6 @@
 // const findMeExports = require('./lib/find-me');
 
 // Circular module
-const m1 = require('./lib/m1');
-console.log(m1);
+
+// const m1 = require('./lib/m1');
+// console.log(m1);
