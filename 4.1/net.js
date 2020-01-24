@@ -21,19 +21,26 @@
 process.stdout.write('\u001B[2J\u001B[0;0f');
 
 const server = require('net').createServer();
+let counter = 0;
+let sockets = {};
 
 server.on('connection', (socket) => {
+  socket.id = counter++;
+  sockets[socket.id] = socket; // how to index an object  
   console.log("Client connection");
   socket.write('welcome new client\n');
 
   socket.on('data', (data) => {
-    
-    socket.write(`${socket.id} `);
-    socket.write(data)
-  })
+      Object.entries(sockets) // loop through an object with key and value 
+      .forEach(([key, cs])=>{
+        cs.write(`${socket.id}: `)
+        cs.write(data);
+
+      })   })
   // socket.setEncoding('UTF8'); // to make server transfer numbers from buffer into letters
   
   socket.on('end' , () => {
+    delete sockets[socket.id];
     console.log('Client disconnected');
   })
 
