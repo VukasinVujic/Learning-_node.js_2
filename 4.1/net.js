@@ -17,7 +17,6 @@
 
 // server.listen(8000, () => console.log('Server bound'));
 
-
 process.stdout.write('\u001B[2J\u001B[0;0f');
 
 const server = require('net').createServer();
