@@ -8,7 +8,6 @@ fs.readFile(__filename, (err, data) => {
   // do something with data
 });
 
-
 // Synchronous Form:
 const data = fs.readFileSync(__filename);
 // exceptions are immediately thrown

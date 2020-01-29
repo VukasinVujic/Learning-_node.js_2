@@ -4,6 +4,8 @@ const dirname = path.join(__dirname, 'files');
 
 const files = fs.readdirSync(dirname);
 
+console.log(dirname);
+
 files.forEach(file => {
   const filePath = path.join(dirname, file);
   fs.stat(filePath, (err, stats) => {
